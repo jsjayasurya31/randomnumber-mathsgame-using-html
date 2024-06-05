@@ -1,0 +1,37 @@
+<center>
+<h1 style="background-color: black;color:rgb(23, 23, 224);">Guess the Number</h1>
+</center>
+<center>
+<input id="Guessnumber" style="background-color: bisque;color: red;">
+<button onclick="Check()">Check</button>
+<P id="result" style="color:black;background-color: rgb(14, 247, 14);">you are right/Wrong</P>
+<p id="Score" style="background-color: yellow;color: rgb(223, 93, 6);">Score:10</p>
+<nav>
+<script>
+    var Guessnumber=document.getElementById("Guessnumber")
+    var result=document.getElementById("result")
+    var randomnumber=Math.floor(Math.random()*10)+1
+    var score=document.getElementById("Score")
+    var totalscore=10
+    function Check()
+    {
+        var enterednumber=Guessnumber.value
+        if(randomnumber==enterednumber)
+        {
+            console.log("Right")
+            result.textContent="Right"
+            alert("you won..!")
+        }   
+       else
+       {
+        console.log("wrong")
+        totalscore=totalscore-1
+        result.textContent="Wrong"
+        alert("you loss ")
+        score.textContent = "score:"+totalscore
+       }
+    }
+
+</script>
+</nav>
+</center>
